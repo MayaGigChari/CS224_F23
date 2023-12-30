@@ -1,0 +1,12 @@
+This directory contains two datasets:
+
+1.mixture1.*
+Contains data from a mixture model with 2 components (i.e. populations)
+Use this data to test your implementation.
+
+mixture1.geno contains genoytpes for 1000 haploid individuals at 250 SNPs (1000 rows and 250 columns)
+mixture1.freq is the allele frequency in each of the two populations (F; rows = number of SNPs, columns = number of populations)
+mixture1.ganc indicates which population each individual belongs to (Z; rows = number of individuals, columns = number of populations)
+
+
+2. mixture2.geno contains the genotype data for 1000 individuals at 250 SNPs

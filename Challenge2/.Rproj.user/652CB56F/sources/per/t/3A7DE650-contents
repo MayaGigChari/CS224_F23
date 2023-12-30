@@ -1,0 +1,36 @@
+#R attempts of the next challenge thing 
+
+#step 0: load data
+
+install.packages("caret", dependencies = c("Depends", "Suggests"))
+
+train_genotype = data.frame(X_train_df)
+train_phenotype = data.frame(read.table("train.phenotype.txt"))
+test_genotype = read.csv("test.genotype.txt")
+dim(train_genotype)
+
+train_phenotype[1]
+#might try this thing called recursive feature selection. but can also use univariate feature selection 
+
+
+#attempt 1: Univariate Feature Selection using Carat 
+
+library(caret)
+library(gam)
+
+
+filterCtrl <- sbfControl(functions = rfSBF, method = "repeatedcv", repeats = 5)
+set.seed(10)
+rfWithFilter <- sbf(train_genotype[1:200], train_phenotype[[1]], sbfControl = filterCtrl)
+rfWithFilter #this tells us that nothing is useful
+
+
+#attempt 2: 
+
+filterCtrl <- rfeControl(functions=rfFuncs, method="cv", number=3)
+results <- rfe(train_genotype[1:200],train_phenotype[[1]], sizes=c(1:200), rfeControl=filterCtrl)
+results
+
+
+print(results)
+dim(train_phenotype)

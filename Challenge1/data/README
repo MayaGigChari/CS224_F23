@@ -1,0 +1,9 @@
+ancestry_train.data: An Ntrain x M matrix in txt file storing the SNP information of the input data, used for training purposes (Ntrain represents individual numbers; M represents the available SNPs). 
+
+ancestry_train.solution: A Ntrain x K matrix in txt file representing the proportion (range 0-1) of each individual belonging to each of the K different ancestry groups, used for training purposes 
+
+ancestry_test.data: An Nvalid x M matrix in txt file storing the SNP information of the input data, used for validation purposes (Ntrain represents individual numbers; M represents the available SNPs). 
+
+ancestry_label.name: The categories of the response variable y (for reference purpose only)
+
+ancestry_feat.name: The feature name of each input feature (for reference purpose only)

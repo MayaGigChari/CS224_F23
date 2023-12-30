@@ -1,0 +1,9 @@
+1. gwas.geno:
+genotypes for 500 individuals at 382 SNPs.
+Each row is an individual
+Each column is a SNP
+Each entry is a 0,1 ,or 2
+
+2. gwas.pheno:
+Contains 4 phenotypes measured for each individual.
+Each line corresponds to the phenotype for an individual
